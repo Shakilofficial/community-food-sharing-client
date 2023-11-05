@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaFacebook,  FaInstagram, FaLocationArrow,FaPhone, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,6 +22,20 @@ const Footer = () => {
                 Excess Eats
               </span>
             </a>
+            <div className="mt-4 space-y-3">
+              <p className="flex gap-4 items-center">
+                <FaLocationArrow/>
+                <span>Fake address, 9999 City</span>
+              </p>
+              <p className="flex gap-4 items-center">
+                <FaPhone/>
+                <span>123456789</span>
+              </p>
+              <p className="flex gap-4 items-center">
+                <FaEnvelope/>
+                <span>contact@business.com</span>
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
