@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div>
@@ -17,7 +19,7 @@ const Footer = () => {
                 />
               </div>
               <span className="self-center text-2xl font-semibold">
-              Excess Eats
+                Excess Eats
               </span>
             </a>
           </div>
@@ -84,7 +86,11 @@ const Footer = () => {
             </div>
             <div className="space-y-3">
               <div className="uppercase dark:text-gray-50">Social media</div>
-              <div className="flex justify-start space-x-3"></div>
+              <div className="flex text-2xl justify-start items-center space-x-3">
+                <FaFacebook />
+                <FaInstagram />
+                <FaTwitter />
+              </div>
             </div>
           </div>
         </div>
