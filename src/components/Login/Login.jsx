@@ -42,7 +42,7 @@ const Login = () => {
               </div>
             </div>
             <input
-              className="block w-full p-3 text-center rounded-md dark:text-gray-900 dark:bg-violet-400"
+              className="block w-full p-3 text-center rounded-md font-semibold text-white bg-blue-500 dark:text-gray-900 dark:bg-violet-400"
               type="submit"
               value="Sign in"
             />
@@ -56,17 +56,17 @@ const Login = () => {
           </div>
           <div className="flex text-2xl justify-center space-x-4">
             <button aria-label="Log in with Google" className="p-3 rounded-sm">
-              <FaGoogle/>
+              <FaGoogle />
             </button>
             <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
-              <FaGithub/>
+              <FaGithub />
             </button>
           </div>
           <div className="mt-4 font-semibold text-slate-500 text-center">
             Do not have an account?
             <Link
               to="/signUp"
-              className="ml-2 text-red-600 hover:underline hover:underline-offset-4"
+              className="ml-2 text-blue-600 hover:underline hover:underline-offset-4"
             >
               SignUp
             </Link>

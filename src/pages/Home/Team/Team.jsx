@@ -4,7 +4,7 @@ const Team = () => {
     <section className="py-6 dark:bg-gray-800 dark:text-gray-100">
       <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
         <h4 className="text-xl text-red-500 font-bold mb-6">Team</h4>
-        <h2 className="text-5xl font-bold">Meet the dedicated Team</h2>
+        <h2 className="text-5xl font-bold text-center">Meet the dedicated Team</h2>
         <div className="flex flex-row flex-wrap-reverse justify-center mt-16">
           <div className="flex flex-col shadow-md justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
             <img

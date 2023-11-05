@@ -57,7 +57,7 @@ const SignUp = () => {
               />
             </div>
             <input
-              className="block w-full p-3 text-center rounded-md dark:text-gray-900 dark:bg-violet-400"
+              className="block w-full p-3 text-center rounded-md font-semibold text-white bg-red-500 dark:text-gray-900 dark:bg-violet-400"
               type="submit"
               value="Sign Up"
             />

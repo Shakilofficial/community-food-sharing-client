@@ -116,7 +116,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <Link to="/login">
-        <button type="button" className="px-4 py-2 font-semibold border border-red-500 rounded-md dark:text-gray-100">Login</button>
+        <button type="button" className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100">Login</button>
         </Link>
       </div>
     </div>

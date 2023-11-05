@@ -48,7 +48,7 @@ const Contact = () => {
         <input
           type="submit"
           value="Send Message"
-          className="w-full p-3 text-sm font-bold tracking-wider uppercase rounded dark:bg-violet-400 dark:text-gray-900"
+          className="block w-full p-3 text-center rounded-md font-semibold text-white bg-red-500 dark:text-gray-900 dark:bg-violet-400"
         />
       </form>
     </div>
