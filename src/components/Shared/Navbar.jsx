@@ -104,7 +104,7 @@ const Navbar = () => {
           to="/"
         >
           <img
-            className="h-14 w-14"
+            className="h-12 w-12"
             src="https://i.ibb.co/G2LrT0C/bibimbap.png"
             alt=""
           />
@@ -116,9 +116,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <Link to="/login">
-          <button className="btn btn-outline font-semibold text-red-500">
-            Login
-          </button>
+        <button type="button" className="px-4 py-2 font-semibold border border-red-500 rounded-md dark:text-gray-100">Login</button>
         </Link>
       </div>
     </div>
