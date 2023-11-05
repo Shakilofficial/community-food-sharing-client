@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "foodImage": "https://i.ibb.co/2SsCVSV/food-1.jpg",
+    "foodName": "Spaghetti Bolognese",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/1GbFMK6/team2.jpg",
+      "donatorName": "John Doe"
+    },
+    "foodQuantity": "Serves 4",
+    "pickupLocation": "123 Main St, City ville",
+    "expiredDateTime": "2023-11-10 14:30",
+    "additionalNotes": "Contains meat and gluten."
+  },
+  {
+    "id": 2,
+    "foodImage": "https://i.ibb.co/nQWshss/food-2.jpg",
+    "foodName": "Vegetable Stir-Fry",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/Pg43B2C/team1.jpg",
+      "donatorName": "Alice Smith"
+    },
+    "foodQuantity": "Serves 3",
+    "pickupLocation": "456 Elm St, Townsville",
+    "expiredDateTime": "2023-11-12 18:00",
+    "additionalNotes": "Vegan and gluten-free."
+  },
+  {
+    "id": 3,
+    "foodImage": "https://i.ibb.co/s3scms4/food-3.jpg",
+    "foodName": "Chicken Curry",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/7C4wp1y/team3.jpg",
+      "donatorName": "Mark Johnson"
+    },
+    "foodQuantity": "Serves 6",
+    "pickupLocation": "789 Oak St, Villagetown",
+    "expiredDateTime": "2023-11-14 20:30",
+    "additionalNotes": "Spicy and aromatic."
+  },
+  {
+    "id": 4,
+    "foodImage": "https://i.ibb.co/jwCyDjp/food-7.jpg",
+    "foodName": "Margherita Pizza",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/TYzF7yn/avatar-3.jpg",
+      "donatorName": "Sarah Lee"
+    },
+    "foodQuantity": "Serves 2",
+    "pickupLocation": "101 Pine St, Suburbia",
+    "expiredDateTime": "2023-11-15 12:00",
+    "additionalNotes": "Fresh and cheesy."
+  },
+  {
+    "id": 5,
+    "foodImage": "https://i.ibb.co/mR4K7hz/food-5.jpg",
+    "foodName": "Fruit Salad",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/N67Zwpp/avatar-2.jpg",
+      "donatorName": "Robert Wilson"
+    },
+    "foodQuantity": "Serves 8",
+    "pickupLocation": "202 Cedar St, Countryside",
+    "expiredDateTime": "2023-11-18 15:30",
+    "additionalNotes": "Healthy and refreshing."
+  },
+  {
+    "id": 6,
+    "foodImage": "https://i.ibb.co/82tKVbC/food-6.jpg",
+    "foodName": "Chocolate Cake",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/PthLJZz/avatar-1.jpg",
+      "donatorName": "Emily Brown"
+    },
+    "foodQuantity": "Serves 10",
+    "pickupLocation": "303 Birch St, Outskirts",
+    "expiredDateTime": "2023-11-20 16:45",
+    "additionalNotes": "Indulgent dessert."
+  }
+]

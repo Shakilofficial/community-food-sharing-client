@@ -1,4 +1,5 @@
 import Banner from "./Banner/Banner";
+import Contact from "./Contact/Contact";
 import Features from "./Features/Features";
 import Team from "./Team/Team";
 import Testimonial from "./Testimonial/Testimonial";
@@ -10,7 +11,7 @@ const Home = () => {
       <Team />
       <Testimonial />
       <Features />
-      <h3 className="text-xl">This is Home Page</h3>
+      <Contact />
     </div>
   );
 };
