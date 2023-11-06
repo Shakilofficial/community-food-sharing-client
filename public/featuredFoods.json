@@ -22,7 +22,7 @@
     },
     "foodQuantity": 3,
     "pickupLocation": "456 Elm St, Townsville",
-    "expiredDate": "2023-11-12",
+    "expiredDate": "2023-11-17",
     "additionalNotes": "Vegan and gluten-free."
   },
   {
@@ -76,5 +76,44 @@
     "pickupLocation": "303 Birch St, Outskirts",
     "expiredDate": "2023-11-20",
     "additionalNotes": "Indulgent dessert."
+  },
+  {
+    "id": 7,
+    "foodImage": "https://i.ibb.co/LSWq7Yp/food-8.jpg",
+    "foodName": "Vegetable Curry",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/ft6RJrK/avatar-8.jpg",
+      "donatorName": "Linda Davis"
+    },
+    "foodQuantity": 5,
+    "pickupLocation": "505 Elm St, Townsville",
+    "expiredDate": "2023-11-22",
+    "additionalNotes": "Vegan and spicy."
+  },
+  {
+    "id": 8,
+    "foodImage": "https://i.ibb.co/TmTD2jR/food-9.jpg",
+    "foodName": "Seafood Paella",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/wwv4G7f/avatar-10.jpg",
+      "donatorName": "Michael Smith"
+    },
+    "foodQuantity": 4,
+    "pickupLocation": "808 Oak St, Villagetown",
+    "expiredDate": "2023-11-25",
+    "additionalNotes": "Contains seafood and saffron."
+  },
+  {
+    "id": 9,
+    "foodImage": "https://i.ibb.co/b76G4Wj/food-10.jpg",
+    "foodName": "Mushroom Risotto",
+    "donator": {
+      "donatorImage": "https://i.ibb.co/NpH3s5b/avatar-7.jpg",
+      "donatorName": "Olivia Johnson"
+    },
+    "foodQuantity": 3,
+    "pickupLocation": "606 Pine St, Suburbia",
+    "expiredDate": "2023-11-28",
+    "additionalNotes": "Vegetarian and creamy."
   }
 ]
