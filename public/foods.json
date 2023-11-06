@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "food_id": 1,
     "foodImage": "https://i.ibb.co/2SsCVSV/food-1.jpg",
     "foodName": "Spaghetti Bolognese",
     "donator": {
@@ -13,7 +13,7 @@
     "additionalNotes": "Contains meat and gluten."
   },
   {
-    "id": 2,
+    "food_id": 2,
     "foodImage": "https://i.ibb.co/nQWshss/food-2.jpg",
     "foodName": "Grilled Chicken Noodles",
     "donator": {
@@ -26,7 +26,7 @@
     "additionalNotes": "Vegan and gluten-free."
   },
   {
-    "id": 3,
+    "food_id": 3,
     "foodImage": "https://i.ibb.co/s3scms4/food-3.jpg",
     "foodName": "Strawberry Noodles",
     "donator": {
@@ -39,7 +39,7 @@
     "additionalNotes": "Spicy and aromatic."
   },
   {
-    "id": 4,
+    "food_id": 4,
     "foodImage": "https://i.ibb.co/jwCyDjp/food-7.jpg",
     "foodName": "Breakfast Food",
     "donator": {
@@ -52,7 +52,7 @@
     "additionalNotes": "Fresh and cheesy."
   },
   {
-    "id": 5,
+    "food_id": 5,
     "foodImage": "https://i.ibb.co/mR4K7hz/food-5.jpg",
     "foodName": "Beef T-Bone Stake",
     "donator": {
@@ -65,7 +65,7 @@
     "additionalNotes": "Healthy and refreshing."
   },
   {
-    "id": 6,
+    "food_id": 6,
     "foodImage": "https://i.ibb.co/82tKVbC/food-6.jpg",
     "foodName": "Fruit Salad",
     "donator": {
@@ -78,7 +78,7 @@
     "additionalNotes": "Indulgent dessert."
   },
   {
-    "id": 7,
+    "food_id": 7,
     "foodImage": "https://i.ibb.co/LSWq7Yp/food-8.jpg",
     "foodName": "Vegetable Curry",
     "donator": {
@@ -91,7 +91,7 @@
     "additionalNotes": "Vegan and spicy."
   },
   {
-    "id": 8,
+    "food_id": 8,
     "foodImage": "https://i.ibb.co/TmTD2jR/food-9.jpg",
     "foodName": "Seafood Paella",
     "donator": {
@@ -104,7 +104,7 @@
     "additionalNotes": "Contains seafood and saffron."
   },
   {
-    "id": 9,
+    "food_id": 9,
     "foodImage": "https://i.ibb.co/b76G4Wj/food-10.jpg",
     "foodName": "Mushroom Risotto",
     "donator": {

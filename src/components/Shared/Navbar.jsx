@@ -114,7 +114,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link
-          className="flex justify-center items-center gap-2 ml-14 lg:ml-0"
+          className="flex justify-center items-center gap-2 ml-6 lg:ml-0"
           to="/"
         >
           <img

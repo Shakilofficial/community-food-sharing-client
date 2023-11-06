@@ -18,8 +18,8 @@ const Footer = () => {
                   alt=""
                 />
               </div>
-              <span className="self-center text-2xl font-semibold">
-                Excess Eats
+              <span className="self-center text-xl font-semibold">
+                ExcessEats
               </span>
             </a>
             <div className="mt-4 space-y-3">

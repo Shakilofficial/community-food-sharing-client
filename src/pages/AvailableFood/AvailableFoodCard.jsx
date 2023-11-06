@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 const AvailableFoodCard = ({ availableFood }) => {
-    const { id, foodImage, foodName, foodQuantity, expiredDate } = availableFood;
+    const { _id, foodImage, foodName, foodQuantity, expiredDate } = availableFood;
   return (
     <div className="shadow-md rounded-lg bg-white dark:bg-gray-800">
       <div className="p-4 space-y-3">
@@ -15,7 +15,7 @@ const AvailableFoodCard = ({ availableFood }) => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <Link to={`/checkout/${id}`}>
+          <Link to={`/food/${_id}`}>
             <button className="px-4 py-2 text-white text-sm font-semibold rounded bg-red-500 hover:bg-red-800 hover:text-white dark:bg-gray-100 dark:text-black">
               View Details
             </button>

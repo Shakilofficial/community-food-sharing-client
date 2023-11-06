@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import FeaturedFoodCard from "./FeaturedFoodCard";
 import { Link } from "react-router-dom";
+import FeaturedFoodCard from "./FeaturedFoodCard";
 
 const FeaturedFoods = () => {
   const [featuredFoods, setFeaturedFoods] = useState([]);
   useEffect(() => {
-    fetch("featuredFoods.json")
+    fetch("http://localhost:5000/foods")
       .then((res) => res.json())
       .then((data) => {
         const sortedFeaturedFoods = data.sort(
@@ -27,7 +27,7 @@ const FeaturedFoods = () => {
         <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           {featuredFoods.map((featuredFood) => (
             <FeaturedFoodCard
-              key={featuredFood.id}
+              key={featuredFood._id}
               featuredFood={featuredFood}
             ></FeaturedFoodCard>
           ))}
