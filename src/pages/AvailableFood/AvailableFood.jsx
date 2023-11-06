@@ -41,16 +41,16 @@ const AvailableFood = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="max-w-7xl mx-auto">
         <div className="flex justify-between gap-4 items-center px-8 mb-4">
           <input
             type="text"
             placeholder="Search by Food Name"
             value={searchFood}
             onChange={handleSearch}
-            className="p-2 border-2 border-red-600 text-black rounded"
+            className="p-2 border-2 text-sm border-red-600 text-black rounded"
           />
-          <button onClick={handleSort} className="px-4 py-2 bg-red-500 text-white rounded">
+          <button onClick={handleSort} className="px-4 py-2 bg-red-500 text-sm text-white rounded">
             Sort by Expire Date
           </button>
         </div>

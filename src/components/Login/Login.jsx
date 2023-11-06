@@ -42,7 +42,7 @@ const Login = () => {
               </div>
             </div>
             <input
-              className="block w-full p-3 text-center rounded-md font-semibold text-white bg-blue-500 dark:text-gray-900 dark:bg-violet-400"
+              className="block w-full p-3 text-center rounded-md font-semibold text-white bg-blue-500 dark:text-gray-900 dark:bg-blue-500"
               type="submit"
               value="Sign in"
             />

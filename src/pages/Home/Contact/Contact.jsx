@@ -1,4 +1,4 @@
-import contactImg from "../../../assets/images/contactUS.svg";
+import contactImg from "../../../assets/images/un-contactUs.svg";
 const Contact = () => {
   return (
     <div className="grid max-w-screen-xl grid-cols-1 gap-10 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100">
@@ -48,7 +48,7 @@ const Contact = () => {
         <input
           type="submit"
           value="Send Message"
-          className="block w-full p-3 text-center rounded-md font-semibold text-white bg-red-500 dark:text-gray-900 dark:bg-violet-400"
+          className="block w-full p-3 text-center rounded-md font-semibold bg-red-500 dark:text-white dark:bg-red-500"
         />
       </form>
     </div>

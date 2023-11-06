@@ -20,7 +20,7 @@
       "donatorImage": "https://i.ibb.co/Pg43B2C/team1.jpg",
       "donatorName": "Alice Smith"
     },
-    "foodQuantity": 3,
+    "foodQuantity": 6,
     "pickupLocation": "456 Elm St, Townsville",
     "expiredDate": "2023-11-17",
     "additionalNotes": "Vegan and gluten-free."
@@ -33,7 +33,7 @@
       "donatorImage": "https://i.ibb.co/7C4wp1y/team3.jpg",
       "donatorName": "Mark Johnson"
     },
-    "foodQuantity": 6,
+    "foodQuantity": 3,
     "pickupLocation": "789 Oak St, Villagetown",
     "expiredDate": "2023-11-14",
     "additionalNotes": "Spicy and aromatic."
@@ -98,7 +98,7 @@
       "donatorImage": "https://i.ibb.co/wwv4G7f/avatar-10.jpg",
       "donatorName": "Michael Smith"
     },
-    "foodQuantity": 4,
+    "foodQuantity": 9,
     "pickupLocation": "808 Oak St, Villagetown",
     "expiredDate": "2023-11-25",
     "additionalNotes": "Contains seafood and saffron."
