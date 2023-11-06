@@ -1,6 +1,20 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOut()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const navItems = (
     <>
       <li className="font-semibold mr-2">
@@ -115,9 +129,43 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems} </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-        <button type="button" className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100">Login</button>
-        </Link>
+                <div className="gap-2 flex justify-center items-center">
+          <div>
+            {user?.email ? (
+              <p className="px-2 font-semibold">{user.displayName}</p>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="mr-2">
+            {user && user.photoURL && (
+              <img
+                src={user.photoURL}
+                alt="Profile"
+                title={user.displayName}
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                }}
+              />
+            )}
+          </div>
+          {user?.email ? (
+            <button
+              onClick={handleSignOut}
+              className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100">
+                Login
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
