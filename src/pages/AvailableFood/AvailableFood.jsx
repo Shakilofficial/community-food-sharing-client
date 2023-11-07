@@ -18,14 +18,14 @@ const AvailableFood = () => {
   const handleSearch = (event) => {
     setSearchFood(event.target.value);
     const filteredFoods = availableFoods.filter((food) =>
-      food.foodName.toLowerCase().includes(event.target.value.toLowerCase()) // Adjust the field name
+      food.foodName.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setSortedFoods(filteredFoods);
   };
 
   const handleSort = () => {
     const sortedFoodsCopy = [...sortedFoods];
-    sortedFoodsCopy.sort((a, b) => new Date(a.expiredDate) - new Date(b.expiredDate)); // Adjust the field name
+    sortedFoodsCopy.sort((a, b) => new Date(a.expiredDate) - new Date(b.expiredDate));
     setSortedFoods(sortedFoodsCopy);
   };
 

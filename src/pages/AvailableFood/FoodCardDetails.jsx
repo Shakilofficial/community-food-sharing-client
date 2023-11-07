@@ -1,10 +1,13 @@
-import { useState } from "react";
-import { FaCalendarCheck, FaCheckCircle, FaLocationArrow } from "react-icons/fa";
+import {
+  FaCalendarCheck,
+  FaCheckCircle,
+  FaLocationArrow,
+} from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import FoodRequest from "../../components/FoodRequest/FoodRequest";
 
 const FoodCardDetails = () => {
-    const [isRequestModalOpen, setRequestModalOpen] = useState(false);
-
+  
   const food = useLoaderData();
   const {
     _id,
@@ -12,20 +15,12 @@ const FoodCardDetails = () => {
     foodName,
     foodQuantity,
     expiredDate,
-    donator,
+    donatorImage,
+    donatorName,
     pickupLocation,
     additionalNotes,
-    } = food;
-    
-    
-    const openRequestModal = () => {
-        setRequestModalOpen(true);
-      };
-    
-      const closeRequestModal = () => {
-        setRequestModalOpen(false);
-    };
-    
+  } = food;
+  
   return (
     <div className="my-10 space-y-16 px-4">
       <div
@@ -46,11 +41,11 @@ const FoodCardDetails = () => {
         <div className="flex justify-between items-center space-x-4">
           <img
             alt=""
-            src={donator.donatorImage}
+            src={donatorImage}
             className="object-cover w-14 h-14 rounded-full shadow dark:bg-gray-500"
           />
           <div className="flex flex-col space-y-1">
-            <p className="font-semibold">{donator.donatorName}</p>
+            <p className="font-semibold">{donatorName}</p>
             <p className="flex justify-center items-center gap-4">
               <FaLocationArrow />
               <span className="text-xs font-semibold dark:text-gray-400">
@@ -72,13 +67,13 @@ const FoodCardDetails = () => {
         </div>
         <div className="flex flex-wrap justify-between">
           <p className="flex justify-center font-semibold items-center gap-4">
-            <FaCheckCircle /> Quantity: 
+            <FaCheckCircle /> Quantity:
             <span className="text-lg text-red-500 dark:text-gray-400">
               {foodQuantity}
             </span>
           </p>
           <p className="flex justify-center font-semibold items-center gap-4">
-            <FaCalendarCheck /> Expire: 
+            <FaCalendarCheck /> Expire:
             <span className="text-lg text-red-500 dark:text-gray-400">
               {expiredDate}
             </span>
@@ -86,10 +81,23 @@ const FoodCardDetails = () => {
         </div>
         <div className="flex justify-center items-center">
           <Link to={`/food/${_id}`}>
-            <button className="px-4 py-2 text-white text-sm font-semibold rounded bg-red-500 hover:bg-red-800 hover:text-white dark:bg-gray-100 dark:text-black">
+            <button
+              className="px-4 py-2 bg-red-500 text-sm text-white rounded"
+              onClick={() => document.getElementById("my_modal_4").showModal()}
+            >
               Request
             </button>
           </Link>
+          <dialog id="my_modal_4" className="modal">
+            <div className="modal-box w-11/12 max-w-xl">
+              <FoodRequest food={food} />
+              <div className="modal-action">
+                <form method="dialog">
+                  <button className="px-4 py-2 bg-red-500 text-sm text-white rounded">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
       </div>
     </div>
