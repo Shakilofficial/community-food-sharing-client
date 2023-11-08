@@ -47,11 +47,11 @@ const ManageSingleFood = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-xl mx-auto">
       <h2 className="text-center font-bold text-4xl mb-8">
         Manage Single Food Request
       </h2>
-      <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-6">
+      <div className="px-4 grid grid-cols-1 gap-10 mb-6">
         {foodRequest.map((item) => (
           <SingleFoodCard
             key={item._id}
