@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
-const TableData = ({ food }) => {
-  const [isFood, setIsFood] = useState([]);
+const TableData = ({ food, setManageFoods }) => {
   const {
     _id,
     donatorName,
@@ -14,9 +11,8 @@ const TableData = ({ food }) => {
     foodStatus,
     pickupLocation,
   } = food;
-  
+
   const handleDelete = (id) => {
-    
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -32,12 +28,15 @@ const TableData = ({ food }) => {
           .then((res) => res.json())
           .then((data) => {
             console.log("Item deleted successfully", data);
-            setIsFood((prevFood) => prevFood.filter((item) => item._id !== id));
+            setManageFoods((prevFoods) =>
+              prevFoods.filter((item) => item._id !== id)
+            );
+
             Swal.fire("Deleted!", "Your item has been deleted.", "success");
           });
       }
     });
-  }
+  };
   return (
     <tr className="border-b border-opacity-20 dark:border-gray-700 dark:bg-gray-900">
       <td className="p-3">
@@ -48,25 +47,26 @@ const TableData = ({ food }) => {
       </td>
       <td className="p-3">
         <p>{expiredDate} </p>
-        <p className="dark:text-gray-400">Friday</p>
       </td>
       <td className="p-3">
         <p>{pickupLocation} </p>
-        <p className="dark:text-gray-400">Tuesday</p>
       </td>
       <td className="p-3">
         <p>{foodStatus} </p>
-        <p className="dark:text-gray-400">Tuesday</p>
       </td>
       <td className="p-3">
         <p>{donatorName} </p>
       </td>
       <td className="p-3">
+        <Link to={`/food-requests/${_id}`}>
+          <button className="btn px-2 py-1 bg-red-800 text-white font-semibold btn-sm">
+            Manage
+          </button>
+        </Link>
+      </td>
+      <td className="p-3">
         <Link to={`/manage-my-foods/${_id}`}>
-          <button
-            // onClick={() => handleEdit(_id)}
-            className="btn px-2 py-1 bg-red-800 text-white font-semibold btn-sm"
-          >
+          <button className="btn px-2 py-1 bg-red-800 text-white font-semibold btn-sm">
             Edit
           </button>
         </Link>

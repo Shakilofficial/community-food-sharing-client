@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const FoodRequest = ({ food }) => {
   const { user } = useContext(AuthContext);
@@ -20,6 +21,9 @@ const FoodRequest = ({ food }) => {
       donator: food.donator,
       pickupLocation: food.pickupLocation,
       userId: user?.userId,
+      email: user?.email,
+      name: user?.displayName,
+      image:user?.photoURL,
       requestDate: new Date().toISOString(),
       additionalNotes: data.additionalNotes,
       donationMoney: data.donationMoney,
@@ -35,6 +39,15 @@ const FoodRequest = ({ food }) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       });
   };
 

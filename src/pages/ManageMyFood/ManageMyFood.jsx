@@ -10,14 +10,9 @@ const ManageMyFood = () => {
     fetch(`http://localhost:5000/manageFood?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setManageFoods(data);
       });
   }, [user]);
-
-  // const handleDelete = (id) => {
-  //   // Implement your delete logic here
-  // };
 
   return (
     <div className="my-10 space-y-16 px-4">
@@ -47,6 +42,7 @@ const ManageMyFood = () => {
                 <th className="p-3">Donar</th>
                 <th className="p-3">Action</th>
                 <th className="p-3">Action</th>
+                <th className="p-3">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -54,7 +50,8 @@ const ManageMyFood = () => {
                 <TableData
                   key={food._id}
                   food={food}
-                  // handleDelete={handleDelete}
+                  manageFoods={manageFoods}
+                  setManageFoods={setManageFoods}
                 ></TableData>
               ))}
             </tbody>

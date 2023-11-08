@@ -1,21 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateFood = () => {
   const { id } = useParams();
-  console.log(id);
-
-  // const [foodData, setFoodData] = useState({
-  //   // : "",
-  //   // : "",
-  //   // : "",
-  //   // : "",
-  //   // : "",
-  //   // : "",
-  //   // : false,
-  // });
   const [foodData, setFoodData] = useState([]);
-  // // console.log(foodData);
 
   useEffect(() => {
     fetch("http://localhost:5000/foods")
@@ -34,7 +23,7 @@ const UpdateFood = () => {
   const handleUpdateFood = async (event) => {
     event.preventDefault();
 
-    const form = event.target; 
+    const form = event.target;
     const foodName = form.foodName.value;
     const foodImage = form.foodImage.value;
     const foodQuantity = form.foodQuantity.value;
@@ -50,7 +39,6 @@ const UpdateFood = () => {
       expiredDate,
       additionalNotes,
     };
-    console.log(foods);
 
     fetch(`http://localhost:5000/manage-my-foods/${id}`, {
       method: "PATCH",
@@ -59,21 +47,24 @@ const UpdateFood = () => {
       },
       body: JSON.stringify(foods),
     })
-      .then((res) => {
-        if (res.ok) {
-          console.log("Food updated successfully");
-        } else {
-          console.error("Failed to update food data");
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Product Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
         }
       })
-      .catch((error) => {
-        console.error("Error updating food:", error);
-      });
+      .catch((error) => console.error("Error updating product:", error));
   };
 
   return (
     <div>
-      <h2>Edit Food</h2>
+      <h2 className="text-4xl font-bold text-center mb-6">Update Your Food</h2>
       <form onSubmit={handleUpdateFood}>
         <div>
           <label className="block text-gray-600 font-semibold">Food Name</label>
