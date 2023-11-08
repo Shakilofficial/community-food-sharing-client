@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
 import TableData from "../../components/TableData/TableData";
-
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ManageMyFood = () => {
   const { user } = useContext(AuthContext);
@@ -16,14 +15,9 @@ const ManageMyFood = () => {
       });
   }, [user]);
 
-
-  const handleEdit = (id) => {
-    // Implement your edit logic here
-  };
-
-  const handleDelete = (id) => {
-    // Implement your delete logic here
-  };
+  // const handleDelete = (id) => {
+  //   // Implement your delete logic here
+  // };
 
   return (
     <div className="my-10 space-y-16 px-4">
@@ -56,11 +50,13 @@ const ManageMyFood = () => {
               </tr>
             </thead>
             <tbody>
-              {
-                manageFoods.map((food) => (
-                  <TableData key={food._id} food={food} handleEdit={handleEdit} handleDelete={handleDelete}></TableData>
-                ))
-              }
+              {manageFoods.map((food) => (
+                <TableData
+                  key={food._id}
+                  food={food}
+                  // handleDelete={handleDelete}
+                ></TableData>
+              ))}
             </tbody>
           </table>
         </div>

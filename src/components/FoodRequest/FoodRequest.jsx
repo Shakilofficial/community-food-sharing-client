@@ -172,7 +172,10 @@ const FoodRequest = ({ food }) => {
           </div>
         </div>
 
-        <button className="px-4 py-2 bg-red-500 text-sm text-white rounded" type="submit">
+        <button
+          className="px-4 py-2 bg-red-500 text-sm text-white rounded"
+          type="submit"
+        >
           Submit Request
         </button>
       </form>

@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../layout/Root";
 import Error from "../components/Error/Error";
-import Home from "../pages/Home/Home";
-import AvailableFood from "../pages/AvailableFood/AvailableFood";
-import SignUp from "../components/SignUp/SignUp";
-import Login from "../components/Login/Login";
-import AddFood from "../pages/AddFood/AddFood";
-import ManageMyFood from "../pages/ManageMyFood/ManageMyFood";
-import MyFoodRequest from "../pages/MyFoodRequest/MyFoodRequest";
-import FoodCardDetails from "../pages/AvailableFood/FoodCardDetails";
 import FoodRequest from "../components/FoodRequest/FoodRequest";
+import Login from "../components/Login/Login";
+import SignUp from "../components/SignUp/SignUp";
+import Root from "../layout/Root";
+import AddFood from "../pages/AddFood/AddFood";
+import AvailableFood from "../pages/AvailableFood/AvailableFood";
+import FoodCardDetails from "../pages/AvailableFood/FoodCardDetails";
+import Home from "../pages/Home/Home";
+import ManageMyFood from "../pages/ManageMyFood/ManageMyFood";
 import UpdateFood from "../pages/ManageMyFood/UpdateFood";
+import MyFoodRequest from "../pages/MyFoodRequest/MyFoodRequest";
 
 const router = createBrowserRouter([
   {

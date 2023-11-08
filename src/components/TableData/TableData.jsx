@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const TableData = ({ food, handleEdit, handleDelete }) => {
+
+const TableData = ({ food }) => {
+  const [isFood, setIsFood] = useState([]);
   const {
     _id,
     donatorName,
@@ -10,7 +14,30 @@ const TableData = ({ food, handleEdit, handleDelete }) => {
     foodStatus,
     pickupLocation,
   } = food;
-
+  
+  const handleDelete = (id) => {
+    
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, keep it",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/foods/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("Item deleted successfully", data);
+            setIsFood((prevFood) => prevFood.filter((item) => item._id !== id));
+            Swal.fire("Deleted!", "Your item has been deleted.", "success");
+          });
+      }
+    });
+  }
   return (
     <tr className="border-b border-opacity-20 dark:border-gray-700 dark:bg-gray-900">
       <td className="p-3">
@@ -37,7 +64,7 @@ const TableData = ({ food, handleEdit, handleDelete }) => {
       <td className="p-3">
         <Link to={`/manage-my-foods/${_id}`}>
           <button
-            onClick={() => handleEdit(_id)}
+            // onClick={() => handleEdit(_id)}
             className="btn px-2 py-1 bg-red-800 text-white font-semibold btn-sm"
           >
             Edit

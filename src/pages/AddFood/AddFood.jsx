@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddFood = () => {
   const { user } = useContext(AuthContext);
@@ -31,6 +32,15 @@ const AddFood = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       });
   };
 
@@ -103,7 +113,7 @@ const AddFood = () => {
             Expired Date
           </label>
           <input
-            type="datetime-local"
+            type="date"
             name="expiredDate"
             className="input w-full"
             {...register("expiredDate")}
