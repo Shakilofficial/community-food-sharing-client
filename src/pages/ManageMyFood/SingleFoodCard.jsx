@@ -1,5 +1,6 @@
 const SingleFoodCard = ({ item, handleUpdateStatus }) => {
   const { _id, name, image, email, requestDate, status } = item;
+
   return (
     <div className="p-5 shadow-lg rounded-md">
       <div className="flex items-center space-x-3">

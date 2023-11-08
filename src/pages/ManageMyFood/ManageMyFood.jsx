@@ -1,18 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TableData from "../../components/TableData/TableData";
-import { AuthContext } from "../../providers/AuthProvider";
 
 const ManageMyFood = () => {
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
   const [manageFoods, setManageFoods] = useState([]);
-
+  // const { id } = useParams()
   useEffect(() => {
-    fetch(`http://localhost:5000/manageFood?email=${user?.email}`)
+    fetch(`http://localhost:5000/foods`)
       .then((res) => res.json())
       .then((data) => {
         setManageFoods(data);
       });
-  }, [user]);
+  }, []);
 
   return (
     <div className="my-10 space-y-16 px-4">
