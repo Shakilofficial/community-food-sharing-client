@@ -1,12 +1,11 @@
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/images/login.svg";
-import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
 import swal from "sweetalert";
+import UseAuth from "../../hooks/UseAuth";
 
 const Login = () => {
-  const { signIn, googleSignIn } = useContext(AuthContext);
+  const { signIn, googleSignIn } = UseAuth();
 
   const location = useLocation();
   const navigate = useNavigate();

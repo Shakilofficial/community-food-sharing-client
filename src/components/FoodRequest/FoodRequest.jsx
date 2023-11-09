@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import UseAuth from "../../hooks/UseAuth";
 
 const FoodRequest = ({ food }) => {
-  const { user } = useContext(AuthContext);
+  const { user } = UseAuth();
   const { register, handleSubmit } = useForm();
   const { id } = useParams();
   console.log(id);
@@ -23,7 +22,7 @@ const FoodRequest = ({ food }) => {
       userId: user?.userId,
       email: user?.email,
       name: user?.displayName,
-      image:user?.photoURL,
+      image: user?.photoURL,
       requestDate: new Date().toISOString(),
       additionalNotes: data.additionalNotes,
       donationMoney: data.donationMoney,

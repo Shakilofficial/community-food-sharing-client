@@ -1,12 +1,12 @@
-import { useContext } from "react";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import registerImg from "../../assets/images/register.svg";
-import { AuthContext } from "../../providers/AuthProvider";
+import UseAuth from "../../hooks/UseAuth";
 
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser } = UseAuth();
 
   const location = useLocation();
   const navigate = useNavigate();

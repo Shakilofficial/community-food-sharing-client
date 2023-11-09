@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import {useState } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import UseAuth from "../../hooks/UseAuth";
 
 const AddFood = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = UseAuth();
   const { register, handleSubmit } = useForm();
   const [foodStatus, setFoodStatus] = useState("available");
 

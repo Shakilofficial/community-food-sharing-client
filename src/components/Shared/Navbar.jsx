@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+import UseAuth from "../../hooks/UseAuth";
 
 const Navbar = () => {
-  const { user, signOut } = useContext(AuthContext);
+  const { user, signOut } = UseAuth();
 
   const handleSignOut = () => {
     signOut()
@@ -17,7 +16,7 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      <li className="font-semibold mr-2">
+      <li className="font-light text-sm md:text-md md:font-semibold mr-2">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -31,7 +30,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="font-semibold mr-2">
+      <li className="font-light text-sm md:text-md md:font-semibold mr-2">
         <NavLink
           to="/available-foods"
           className={({ isActive, isPending }) =>
@@ -45,7 +44,7 @@ const Navbar = () => {
           Available Foods
         </NavLink>
       </li>
-      <li className="font-semibold mr-2">
+      <li className="font-light text-sm md:text-md md:font-semibold mr-2">
         <NavLink
           to="/add-food"
           className={({ isActive, isPending }) =>
@@ -59,7 +58,7 @@ const Navbar = () => {
           Add Food
         </NavLink>
       </li>
-      <li className="font-semibold mr-2">
+      <li className="font-light text-sm md:text-md md:font-semibold mr-2">
         <NavLink
           to="/manage-my-foods"
           className={({ isActive, isPending }) =>
@@ -73,7 +72,7 @@ const Navbar = () => {
           Manage My Foods
         </NavLink>
       </li>
-      <li className="font-semibold mr-2">
+      <li className="font-light text-sm md:text-md md:font-semibold mr-2">
         <NavLink
           to="/my-food-request"
           className={({ isActive, isPending }) =>
@@ -118,21 +117,21 @@ const Navbar = () => {
           to="/"
         >
           <img
-            className="h-12 w-12"
+            className="h-8 w-8 md:h-12 md:w-12"
             src="https://i.ibb.co/G2LrT0C/bibimbap.png"
             alt=""
           />
-          <p className="font-bold text-xl">ExcessEats</p>
+          <p className="font-semibold md:font-bold md:text-xl">ExcessEats</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems} </ul>
       </div>
       <div className="navbar-end">
-                <div className="gap-2 flex justify-center items-center">
+        <div className="gap-2 flex justify-center items-center">
           <div>
             {user?.email ? (
-              <p className="px-2 font-semibold">{user.displayName}</p>
+              <p className="px-2 font-light md:font-semibold">{user.displayName}</p>
             ) : (
               ""
             )}
@@ -144,8 +143,8 @@ const Navbar = () => {
                 alt="Profile"
                 title={user.displayName}
                 style={{
-                  width: "40px",
-                  height: "40px",
+                  width: "30px",
+                  height: "30px",
                   borderRadius: "50%",
                 }}
               />
@@ -154,13 +153,13 @@ const Navbar = () => {
           {user?.email ? (
             <button
               onClick={handleSignOut}
-              className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100"
+              className="px-4 py-2 font-light text-sm md:text-md md:font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100"
             >
               Sign Out
             </button>
           ) : (
             <Link to="/login">
-              <button className="px-4 py-2 font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100">
+              <button className="px-4 py-2 font-light text-sm md:text-md md:font-semibold border border-red-500 rounded-md hover:bg-red-500 dark:text-gray-100">
                 Login
               </button>
             </Link>

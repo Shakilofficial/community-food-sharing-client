@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import UseAuth from "../../hooks/UseAuth";
 
 const MyFoodRequest = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = UseAuth();
 
   const [foodsRequest, setFoodRequest] = useState([]);
 
