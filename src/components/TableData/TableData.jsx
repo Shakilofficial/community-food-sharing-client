@@ -22,7 +22,7 @@ const TableData = ({ food, setManageFoods }) => {
       cancelButtonText: "No, keep it",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/foods/${id}`, {
+        fetch(`https://community-food-sharing-server-theta.vercel.app/foods/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

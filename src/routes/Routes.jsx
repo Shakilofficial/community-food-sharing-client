@@ -9,9 +9,9 @@ import AvailableFood from "../pages/AvailableFood/AvailableFood";
 import FoodCardDetails from "../pages/AvailableFood/FoodCardDetails";
 import Home from "../pages/Home/Home";
 import ManageMyFood from "../pages/ManageMyFood/ManageMyFood";
+import ManageSingleFood from "../pages/ManageMyFood/ManageSingleFood";
 import UpdateFood from "../pages/ManageMyFood/UpdateFood";
 import MyFoodRequest from "../pages/MyFoodRequest/MyFoodRequest";
-import ManageSingleFood from "../pages/ManageMyFood/ManageSingleFood";
 import PrivateRoute from "../providers/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/foods/${params.id}`),
+          fetch(`https://community-food-sharing-server-theta.vercel.app/foods/${params.id}`),
       },
       {
         path: "/food/:id",

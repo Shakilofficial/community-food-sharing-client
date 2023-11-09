@@ -28,7 +28,7 @@ const FoodRequest = ({ food }) => {
       donationMoney: data.donationMoney,
     };
 
-    fetch(`http://localhost:5000/request/${id}`, {
+    fetch(`https://community-food-sharing-server-theta.vercel.app/request/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

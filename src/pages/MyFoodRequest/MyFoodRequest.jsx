@@ -17,7 +17,7 @@ const MyFoodRequest = () => {
       cancelButtonText: "No, keep it",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/food-requests/${id}`, {
+        fetch(`https://community-food-sharing-server-theta.vercel.app/food-requests/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const MyFoodRequest = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/food-requests/${user?.email}`)
+    fetch(`https://community-food-sharing-server-theta.vercel.app/food-requests/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -5,7 +5,7 @@ const ManageMyFood = () => {
 
   const [manageFoods, setManageFoods] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/foods`)
+    fetch(`https://community-food-sharing-server-theta.vercel.app/foods`)
       .then((res) => res.json())
       .then((data) => {
         setManageFoods(data);

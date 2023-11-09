@@ -8,7 +8,7 @@ const ManageSingleFood = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/food-requests`)
+    fetch(`https://community-food-sharing-server-theta.vercel.app/food-requests`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -24,7 +24,7 @@ const ManageSingleFood = () => {
   console.log(foodRequest);
 
   const handleUpdateStatus = (id) => {
-    fetch(`http://localhost:5000/food-requests/${id}`, {
+    fetch(`https://community-food-sharing-server-theta.vercel.app/food-requests/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

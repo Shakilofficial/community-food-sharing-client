@@ -7,7 +7,7 @@ const UpdateFood = () => {
   const [foodData, setFoodData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/foods")
+    fetch("https://community-food-sharing-server-theta.vercel.app/foods")
       .then((res) => res.json())
       .then((data) => {
         setFoodData(data);
@@ -40,7 +40,7 @@ const UpdateFood = () => {
       additionalNotes,
     };
 
-    fetch(`http://localhost:5000/manage-my-foods/${id}`, {
+    fetch(`https://community-food-sharing-server-theta.vercel.app/manage-my-foods/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

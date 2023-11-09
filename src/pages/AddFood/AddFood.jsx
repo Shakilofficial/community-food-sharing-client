@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import UseAuth from "../../hooks/UseAuth";
@@ -22,7 +22,7 @@ const AddFood = () => {
       foodStatus: foodStatus,
     };
 
-    fetch("http://localhost:5000/add-food", {
+    fetch("https://community-food-sharing-server-theta.vercel.app/add-food", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const AvailableFood = () => {
   const [sortedFoods, setSortedFoods] = useState(availableFoods);
 
   useEffect(() => {
-    fetch("http://localhost:5000/foods")
+    fetch("https://community-food-sharing-server-theta.vercel.app/foods")
       .then((res) => res.json())
       .then((data) => {
         setAvailableFoods(data);

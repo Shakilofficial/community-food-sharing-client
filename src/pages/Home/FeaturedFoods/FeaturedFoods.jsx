@@ -5,7 +5,7 @@ import FeaturedFoodCard from "./FeaturedFoodCard";
 const FeaturedFoods = () => {
   const [featuredFoods, setFeaturedFoods] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/foods")
+    fetch("https://community-food-sharing-server-theta.vercel.app/foods")
       .then((res) => res.json())
       .then((data) => {
         const sortedFeaturedFoods = data.sort(
