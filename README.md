@@ -1,4 +1,11 @@
-# React + Vite
+# Features
+- Find and request food: Easily browse food listings and request food that you need.
+- Share food: Easily post food listings to share your surplus food with others.
+- Chat with other users: Send and receive messages to arrange food pick-ups, ask questions, and build relationships.
+- Manage your account: View your past listings and requests, update your profile information, and change your settings.
+- Report problems: Report any problems or concerns you may have.
+
+# Live Link: https://excess-eats.web.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
